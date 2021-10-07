@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block title %}
+    {{wantedEntry}}
+{% endblock %}
+
+
+
+{% block body %}
+    {% if wantedEntry in entryList %}
+        <p>
+            {{content|safe}}
+            <form action="{% url 'edit' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name= "editTitle" value= {{wantedEntry}}>
+                <br>
+                <input type="submit" name= "editButton" value= "Edit page">
+                
+            </form>
+        </p>
+    {% else %}
+        <h1> Error: There are no such entries</h1>
+    {%endif%}
+{% endblock %}
+
