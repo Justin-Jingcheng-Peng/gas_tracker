@@ -1,0 +1,22 @@
+.title_background {
+  z-index: -1;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  filter: brightness(0.5);
+}
+
+.title {
+  color: #ffffff;
+  position: absolute;
+  top:0%;
+  transform: translate(30%, -30%);
+  font-size: 100px;
+  
+
+  text-shadow: 10px 5px #000f29;
+}
+.Title{
+  text-align: center;
+}
